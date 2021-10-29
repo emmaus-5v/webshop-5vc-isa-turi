@@ -1,11 +1,12 @@
 /* all pages */
 
-body {background-color: rgb(0, 225, 255);
+body {background-color: rgba(255, 0, 85, 0.13);
 }
 
 footer {
   margin: 20px;
   font-size: 12px;
+  color:rgba(255, 0, 85, 0.13)
 } 
 
 .toast {
