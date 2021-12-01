@@ -8,16 +8,28 @@ CREATE TABLE products (
   code VARCHAR(15),
   name VARCHAR(255),
   description TEXT,
-  price NUMERIC(10, 2)
+  price NUMERIC(10, 2),
+  color_id INTEGER
 );
 
-DROP TABLE IF EXISTS kleur
-CREATE TABLE kleur(
+DROP TABLE IF EXISTS color; 
+CREATE TABLE color (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  color VARCHAR(15)
-)
+  name VARCHAR(25)
+);
 
+DROP TABLE IF EXISTS category; 
+CREATE TABLE  category (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR(25)
+);
 
+DROP TABLE IF EXISTS productsCategory; 
+CREATE TABLE  productsCategory (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  products_id INTEGER,
+  category_id INTEGER
+);
 
 --
 -- populate with data
@@ -28,39 +40,40 @@ CREATE TABLE kleur(
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price) values ('Necklace', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+insert into products (id, name, description, code, price, color_id) values 
+(1, 'Necklace', 
+'ketting', '816905633-0', 10.5, 1);
 
-Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+insert into products (id, name, description, code, price, color_id) values 
+(2, 'Bracelet', 
+'armband', '077030122-3', 11, 1);
 
-In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.', '816905633-0', 10.5);
-insert into products (name, description, code, price) values ('Bracelet', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
+insert into products (id, name, description, code, price, color_id) values 
+(3, 'Earrings',
+'oorbellen', '445924201-X', 13.5, 1);
 
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
+insert into products (id, name, description, code, price, color_id) values 
+(4, 'Ring', 
+'ring', '693155505-7', 13.5, 1);
 
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.', '077030122-3', 11);
-insert into products (name, description, code, price) values ('Earrings', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+insert into products (id, name, description, code, price, color_id) values 
+(5, 'Watch band', 
+'horloge band', '686928463-6', 14, 1);
 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+insert into products (id, name, description, code, price, color_id) values 
+(6, 'Bedeltje',
+'bedeltje', '492662523-7', 14, 1);
 
-Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.', '445924201-X', 13.5);
-insert into products (name, description, code, price) values ('Ring', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
+insert into products (id, name, description, code, price, color_id) values 
+(7, 'Boxes', 
+'box', '492662523-7', 14, 1);
 
-In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
+insert into products (id, name, description, code, price, color_id) values 
+(8, 'Extra', 
+'extra', '492662523-7', 14, 1);
 
-Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.', '693155505-7', 13.5);
-insert into products (name, description, code, price) values ('Watch band', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14);
-insert into products (name, description, code, price) values ('Bedeltje', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
+insert into products (id, name, description, code, price, color_id) values 
+(9, 'Ketting zilver', 
+'ketting', '492662523-7', 14, 1);
 
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 14);
-
-insert into products (name, description, code, price) values ('Boxes', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 14);
-
-insert into products (name, description, code, price) values ('Extra', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 14);
-
-insert into products (name, description, code, price) values ('Ketting zilver', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 14);
+INSERT INTO color (id, name) values (1, 'Goud');
