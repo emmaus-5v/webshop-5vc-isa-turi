@@ -46,7 +46,7 @@ insert into products (id, name, description, code, price, kleur_id) values
 
 insert into products (id, name, description, code, price, kleur_id) values 
 (2, 'Necklace Silver', 
-'armband', '077030122-3', 11, 1);
+'armband', '077030122-3', 11, 2);
 
 insert into products (id, name, description, code, price, kleur_id) values 
 (3, 'Earrings Gold',
@@ -54,7 +54,7 @@ insert into products (id, name, description, code, price, kleur_id) values
 
 insert into products (id, name, description, code, price, kleur_id) values 
 (4, 'Earrings Silver', 
-'ring', '693155505-7', 13.5, 1);
+'ring', '693155505-7', 13.5, 2);
 
 insert into products (id, name, description, code, price, kleur_id) values 
 (5, 'Ring Gold', 
@@ -62,7 +62,7 @@ insert into products (id, name, description, code, price, kleur_id) values
 
 insert into products (id, name, description, code, price, kleur_id) values 
 (6, 'Ring Silver',
-'bedeltje', '492662523-7', 14, 1);
+'bedeltje', '492662523-7', 14, 2);
 
 insert into products (id, name, description, code, price, kleur_id) values 
 (7, 'Bracelet Gold', 
@@ -70,7 +70,8 @@ insert into products (id, name, description, code, price, kleur_id) values
 
 insert into products (id, name, description, code, price, kleur_id) values 
 (8, 'Bracelet Silver', 
-'extra', '492662523-7', 14, 1);
+'extra', '492662523-7', 14, 2);
 
 
 INSERT INTO color (id, name) values (1, 'Goud');
+INSERT INTO color (id, name) values (2, 'zilver')
