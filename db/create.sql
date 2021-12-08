@@ -81,6 +81,7 @@ insert into products (id, name, description, code, price, kleur_id, Meterial_id)
 
 
 INSERT INTO color (id, name) values (1, 'Goud');
+INSERT INTO color (id, name) values (2, 'zilver');
 
 INSERT INTO category (id, name) values (1, 'Necklace');
 INSERT INTO category (id, name) values (2, 'Earring');
