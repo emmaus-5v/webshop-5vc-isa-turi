@@ -49,35 +49,35 @@ CREATE TABLE Meterial (
 
 insert into products (id, name, description, code, price, kleur_id, Meterial_id) values 
 (1, 'Necklace Gold', 
-'ketting', '816905633-0', 10.5, 1, 2);
+'Een goude ketting met twee lagen, aan beide lagen zit een rondje. Bij deze ketting zit ook een gewone algemene sluiting. Staat leuk op alles!', '816905633-0', 10.5, 1, 2);
 
 insert into products (id, name, description, code, price, kleur_id, Meterial_id) values 
 (2, 'Necklace Silver', 
-'armband', '077030122-3', 11, 1, 1);
+'Een zilveren ketting met 1 laag, en rondom de hele ketting zitten leuke rondjes. Ook zit er bij deze ketting een erg simpele sluiting. Leuk voor de feestdagen!', '077030122-3', 11, 1, 1);
 
 insert into products (id, name, description, code, price, kleur_id, Meterial_id) values 
 (3, 'Earrings Gold',
-'oorbellen', '445924201-X', 13.5, 1, 2);
+'Super leuke gouden oorbellen die helemaal in zijn. De achterkantjes zijn hierbij inbegrepen.', '445924201-X', 13.5, 1, 2);
 
 insert into products (id, name, description, code, price, kleur_id, Meterial_id) values 
 (4, 'Earrings Silver', 
-'ring', '693155505-7', 13.5, 1, 1);
+'Leuke zilveren oorbellen met erg leuke hangertjes in de vorm van smileys. Je kan deze oorbellen erg simpel sluiten, gewoon de achterkant om je prikker heen klikken en klaar!', '693155505-7', 13.5, 1, 1);
 
 insert into products (id, name, description, code, price, kleur_id, Meterial_id) values 
 (5, 'Ring Gold', 
-'horloge band', '686928463-6', 14, 1, 2);
+'Gouden ring met de vorm van een krans.', '686928463-6', 14, 1, 2);
 
 insert into products (id, name, description, code, price, kleur_id, Meterial_id) values 
 (6, 'Ring Silver',
-'bedeltje', '492662523-7', 14, 1, 1);
+'Een simpele zilveren ring die overal leuk bij staat!', '492662523-7', 14, 1, 1);
 
 insert into products (id, name, description, code, price, kleur_id, Meterial_id) values 
 (7, 'Bracelet Gold', 
-'box', '492662523-7', 14, 1, 1);
+'Een gouden armband met een plaatje, op deze armband zit een gewone simpele sluiting. Je kan hierbij nog de keuze maken om er iets op te laten zetten voor een iets hogere prijs.', '492662523-7', 14, 1, 1);
 
 insert into products (id, name, description, code, price, kleur_id, Meterial_id) values 
 (8, 'Bracelet Silver', 
-'extra', '492662523-7', 14, 1, 1);
+'Een zilveren armband met een gewone simpele sluiting.', '492662523-7', 14, 1, 1);
 
 
 INSERT INTO color (id, name) values (1, 'Goud');
