@@ -16,32 +16,32 @@ CREATE TABLE Products (
 DROP TABLE IF EXISTS Kleur; 
 CREATE TABLE Kleur (
   k_id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name VARCHAR(25)
+  color VARCHAR(25)
 );
 
-DROP TABLE IF EXISTS Category; 
-CREATE TABLE  Category (
+DROP TABLE IF EXISTS Categorie; 
+CREATE TABLE  Categorie (
   c_id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name VARCHAR(25)
+  category VARCHAR(25)
 );
 
-DROP TABLE IF EXISTS ProductsMaterial; 
-CREATE TABLE  ProductsMaterial (
+DROP TABLE IF EXISTS ProductsMateriaal; 
+CREATE TABLE  ProductsMateriaal (
   pm_id INTEGER PRIMARY KEY AUTOINCREMENT,
   Products_id INTEGER,
-  Material_id INTEGER
+  Materiaal_id INTEGER
 );
 
-DROP TABLE IF EXISTS Material; 
-CREATE TABLE Material (
+DROP TABLE IF EXISTS Materiaal; 
+CREATE TABLE Materiaal (
   m_id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name VARCHAR(30)
+  material VARCHAR(30)
 );
 
 DROP TABLE IF EXISTS Sluiting; 
 CREATE TABLE Sluiting (
   s_id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name VARCHAR(30)
+  clasp VARCHAR(30)
 );
 
 
@@ -95,30 +95,30 @@ insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categ
 14, 1, 1, 4);
 
 
-INSERT INTO Kleur (k_id, name) values (1, 'Goud');
-INSERT INTO Kleur (k_id, name) values (2, 'zilver');
+INSERT INTO Kleur (k_id, color) values (1, 'Goud');
+INSERT INTO Kleur (k_id, color) values (2, 'zilver');
 
-INSERT INTO Category (c_id, name) values (1, 'Necklace');
-INSERT INTO Category (c_id, name) values (2, 'Earring');
-INSERT INTO Category (c_id, name) values (3, 'Ring');
-INSERT INTO Category (c_id, name) values (4, 'Bracelet');
+INSERT INTO Categorie (c_id, category) values (1, 'Necklace');
+INSERT INTO Categorie (c_id, category) values (2, 'Earring');
+INSERT INTO Categorie (c_id, category) values (3, 'Ring');
+INSERT INTO Categorie (c_id, category) values (4, 'Bracelet');
 
-INSERT INTO Material (m_id, name) values (1, 'Echt goud');
-INSERT INTO Material (m_id, name) values (2, 'Echt zilver');
-INSERT INTO Material (m_id, name) values (3, 'Nep goud');
-INSERT INTO Material (m_id, name) values (4, 'Nep zilver');
-INSERT INTO Material (m_id, name) values (5, 'verguld goud');
+INSERT INTO Materiaal (m_id, material) values (1, 'Echt goud');
+INSERT INTO Materiaal (m_id, material) values (2, 'Echt zilver');
+INSERT INTO Materiaal (m_id, material) values (3, 'Nep goud');
+INSERT INTO Materiaal (m_id, material) values (4, 'Nep zilver');
+INSERT INTO Materiaal (m_id, material) values (5, 'verguld goud');
 
-INSERT INTO Sluiting (s_id, name) values (1, 'Wel een Sluiting');
-INSERT INTO Sluiting (s_id, name) values (2, 'Niet een Sluiting');
+INSERT INTO Sluiting (s_id, clasp) values (1, 'Wel een Sluiting');
+INSERT INTO Sluiting (s_id, clasp) values (2, 'Niet een Sluiting');
 
-INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (1, 1, 2);
-INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (2, 1, 5);
-INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (3, 2, 4);
-INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (4, 3, 3);
-INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (5, 4, 2);
-INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (6, 5, 1);
-INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (7, 6, 4);
-INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (8, 7, 2);
-INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (9, 7, 5);
-INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (10, 8, 2);
+INSERT INTO ProductsMateriaal (pm_id, Products_id, Materiaal_id) values (1, 1, 2);
+INSERT INTO ProductsMateriaal (pm_id, Products_id, Materiaal_id) values (2, 1, 5);
+INSERT INTO ProductsMateriaal (pm_id, Products_id, Materiaal_id) values (3, 2, 4);
+INSERT INTO ProductsMateriaal (pm_id, Products_id, Materiaal_id) values (4, 3, 3);
+INSERT INTO ProductsMateriaal (pm_id, Products_id, Materiaal_id) values (5, 4, 2);
+INSERT INTO ProductsMateriaal (pm_id, Products_id, Materiaal_id) values (6, 5, 1);
+INSERT INTO ProductsMateriaal (pm_id, Products_id, Materiaal_id) values (7, 6, 4);
+INSERT INTO ProductsMateriaal (pm_id, Products_id, Materiaal_id) values (8, 7, 2);
+INSERT INTO ProductsMateriaal (pm_id, Products_id, Materiaal_id) values (9, 7, 5);
+INSERT INTO ProductsMateriaal (pm_id, Products_id, Materiaal_id) values (10, 8, 2);
