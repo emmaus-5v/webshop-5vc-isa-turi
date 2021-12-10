@@ -2,44 +2,45 @@
 -- create tables
 --
 
-DROP TABLE IF EXISTS products; 
-CREATE TABLE products (
+DROP TABLE IF EXISTS Products; 
+CREATE TABLE Products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR(255),
   description TEXT,
-  price NUMERIC(10, 2),
-  kleur_id INTEGER,
-  sluiting_id INTEGER
+  Price NUMERIC(10, 2),
+  Kleur_id INTEGER,
+  Sluiting_id INTEGER,
+  Categorie_id INTEGER
 );
 
-DROP TABLE IF EXISTS color; 
-CREATE TABLE color (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+DROP TABLE IF EXISTS Kleur; 
+CREATE TABLE Kleur (
+  k_id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR(25)
 );
 
-DROP TABLE IF EXISTS category; 
-CREATE TABLE  category (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+DROP TABLE IF EXISTS Category; 
+CREATE TABLE  Category (
+  c_id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR(25)
 );
 
-DROP TABLE IF EXISTS productsMaterial; 
-CREATE TABLE  productsMaterial (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  products_id INTEGER,
+DROP TABLE IF EXISTS ProductsMaterial; 
+CREATE TABLE  ProductsMaterial (
+  pm_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  Products_id INTEGER,
   Material_id INTEGER
 );
 
 DROP TABLE IF EXISTS Material; 
 CREATE TABLE Material (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  m_id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR(30)
 );
 
-DROP TABLE IF EXISTS sluiting; 
-CREATE TABLE sluiting (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+DROP TABLE IF EXISTS Sluiting; 
+CREATE TABLE Sluiting (
+  s_id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR(30)
 );
 
@@ -53,71 +54,71 @@ CREATE TABLE sluiting (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (id, name, description, price, kleur_id, sluiting_id) values 
+insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (1, 'Necklace Gold', 
-'Een goude ketting met twee lagen, aan beide lagen zit een rondje. Bij deze ketting zit ook een gewone algemene sluiting. Staat leuk op alles!', 
-15.95, 1, 1);
+'Een goude ketting met twee lagen, aan beide lagen zit een rondje. Bij deze ketting zit ook een gewone algemene Sluiting. Staat leuk op alles!', 
+15.95, 1, 1, 1);
 
-insert into products (id, name, description, price, kleur_id, sluiting_id) values 
+insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (2, 'Necklace Silver', 
-'Een zilveren ketting met 1 laag, en rondom de hele ketting zitten leuke rondjes. Ook zit er bij deze ketting een erg simpele sluiting. Leuk voor de feestdagen!', 
-9.95, 1, 1);
+'Een zilveren ketting met 1 laag, en rondom de hele ketting zitten leuke rondjes. Ook zit er bij deze ketting een erg simpele Sluiting. Leuk voor de feestdagen!', 
+9.95, 1, 1, 1);
 
-insert into products (id, name, description, price, kleur_id, sluiting_id) values 
+insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (3, 'Earrings Gold',
 'Super leuke gouden oorbellen die helemaal in zijn. De achterkantjes zijn hierbij inbegrepen.', 
-13.5, 1, 2);
+13.5, 1, 2, 2);
 
-insert into products (id, name, description, price, kleur_id, sluiting_id) values 
+insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (4, 'Earrings Silver', 
 'Leuke zilveren oorbellen met erg leuke hangertjes in de vorm van smileys. Je kan deze oorbellen erg simpel sluiten, gewoon de achterkant om je prikker heen klikken en klaar!', 
-13.5, 1, 2);
+13.5, 1, 2, 2);
 
-insert into products (id, name, description, price, kleur_id, sluiting_id) values 
+insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (5, 'Ring Gold', 
 'Gouden ring met de vorm van een krans.', 
-14, 1, 2);
+14, 1, 2, 3);
 
-insert into products (id, name, description, price, kleur_id, sluiting_id) values 
+insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (6, 'Ring Silver',
 'Een simpele zilveren ring die overal leuk bij staat!', 
-14, 1, 2);
+14, 1, 2, 3);
 
-insert into products (id, name, description, price, kleur_id, sluiting_id) values 
+insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (7, 'Bracelet Gold', 
-'Een gouden armband met een plaatje, op deze armband zit een gewone simpele sluiting. Je kan hierbij nog de keuze maken om er iets op te laten zetten voor een iets hogere prijs.', 
-14, 1, 1);
+'Een gouden armband met een plaatje, op deze armband zit een gewone simpele Sluiting. Je kan hierbij nog de keuze maken om er iets op te laten zetten voor een iets hogere prijs.', 
+14, 1, 1, 4);
 
-insert into products (id, name, description, price, kleur_id, sluiting_id) values 
+insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (8, 'Bracelet Silver', 
-'Een zilveren armband met een gewone simpele sluiting.', 
-14, 1, 1);
+'Een zilveren armband met een gewone simpele Sluiting.', 
+14, 1, 1, 4);
 
 
-INSERT INTO color (id, name) values (1, 'Goud');
-INSERT INTO color (id, name) values (2, 'zilver');
+INSERT INTO Kleur (k_id, name) values (1, 'Goud');
+INSERT INTO Kleur (k_id, name) values (2, 'zilver');
 
-INSERT INTO category (id, name) values (1, 'Necklace');
-INSERT INTO category (id, name) values (2, 'Earring');
-INSERT INTO category (id, name) values (3, 'Ring');
-INSERT INTO category (id, name) values (4, 'Bracelet');
+INSERT INTO Category (c_id, name) values (1, 'Necklace');
+INSERT INTO Category (c_id, name) values (2, 'Earring');
+INSERT INTO Category (c_id, name) values (3, 'Ring');
+INSERT INTO Category (c_id, name) values (4, 'Bracelet');
 
-INSERT INTO Material (id, name) values (1, 'Echt goud');
-INSERT INTO Material (id, name) values (2, 'Echt zilver');
-INSERT INTO Material (id, name) values (3, 'Nep goud');
-INSERT INTO Material (id, name) values (4, 'Nep zilver');
-INSERT INTO Material (id, name) values (5, 'verguld goud');
+INSERT INTO Material (m_id, name) values (1, 'Echt goud');
+INSERT INTO Material (m_id, name) values (2, 'Echt zilver');
+INSERT INTO Material (m_id, name) values (3, 'Nep goud');
+INSERT INTO Material (m_id, name) values (4, 'Nep zilver');
+INSERT INTO Material (m_id, name) values (5, 'verguld goud');
 
-INSERT INTO sluiting (id, name) values (1, 'met');
-INSERT INTO sluiting (id, name) values (2, 'zonder');
+INSERT INTO Sluiting (s_id, name) values (1, 'Wel een Sluiting');
+INSERT INTO Sluiting (s_id, name) values (2, 'Niet een Sluiting');
 
-INSERT INTO productsMaterial (id, products_id, Material_id) values (1, 1, 2);
-INSERT INTO productsMaterial (id, products_id, Material_id) values (2, 1, 5);
-INSERT INTO productsMaterial (id, products_id, Material_id) values (3, 2, 4);
-INSERT INTO productsMaterial (id, products_id, Material_id) values (4, 3, 3);
-INSERT INTO productsMaterial (id, products_id, Material_id) values (5, 4, 2);
-INSERT INTO productsMaterial (id, products_id, Material_id) values (6, 5, 1);
-INSERT INTO productsMaterial (id, products_id, Material_id) values (7, 6, 4);
-INSERT INTO productsMaterial (id, products_id, Material_id) values (8, 7, 2);
-INSERT INTO productsMaterial (id, products_id, Material_id) values (9, 7, 5);
-INSERT INTO productsMaterial (id, products_id, Material_id) values (10, 8, 2);
+INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (1, 1, 2);
+INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (2, 1, 5);
+INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (3, 2, 4);
+INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (4, 3, 3);
+INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (5, 4, 2);
+INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (6, 5, 1);
+INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (7, 6, 4);
+INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (8, 7, 2);
+INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (9, 7, 5);
+INSERT INTO ProductsMaterial (pm_id, Products_id, Material_id) values (10, 8, 2);
