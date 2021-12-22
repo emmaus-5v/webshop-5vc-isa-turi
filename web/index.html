@@ -46,10 +46,9 @@
 
 	<main id="index">
 		<div class="container">
+			<h2>MusicShop</h2>
+			<p class= "introductie">Hieronder zie je een lijst met sieraden die je allemaal bij ons kunt bestellen.<br> klik op een artikel voor meer informatie<br>klik op de "winkelwagentje" om het artikel in je winkelwagen te stoppen</p> </p>
 			<h5>Artikelen</h5>
-			<p>Hier zie je een lijst met artikelen die je bij mij kunt bestellen.</p>
-			<p>klik op een artikel voor meer informatie<p>
-					<p>klik op de "winkelwagentje" om het artikel in je winkelwagen te stoppen</p>
 		</div>	
     <!-- template for product info-->
   	<template id="productcard">
@@ -148,7 +147,7 @@
               const clone = template.content.cloneNode(true);
               clone.querySelector(".product_title").textContent = name
               clone.querySelector(".product_description").textContent =`${product.description.substr(0, 100)}...`
-              clone.querySelector(".product_price").textContent = `€ ${product.Price.toFixed(2)}`
+              clone.querySelector(".product_price").textContent = `€ ${product.price.toFixed(2)}`
               clone.querySelector(".product_Kleur").textContent = product.color
 			  clone.querySelector(".product_Categorie").textContent = product.category
 			  clone.querySelector(".product_Sluiting").textContent = product.clasp

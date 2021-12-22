@@ -212,7 +212,7 @@ function checkoutOrder(request, response) {
   articleTable += "</table>"
 
   // maak inhoud van mailbericht
-  var body = `<html><body>Hi<br><br>Bedankt voor je bestelling met nummer <b>${orderId}</b><br><br>\n` +
+  var body = `<html><body>Hi<br><br>Bedankt voor je bestelling bij onze online sieraden winkel uw bestel nummer is: <b>${orderId}</b><br><br>\n` +
     `Naam: ${name || '-'} <br>\n` +
     `Adres: ${adres || '-'} <br>\n` +
     `Postcode: ${postcode || '-'} <br>\n` +

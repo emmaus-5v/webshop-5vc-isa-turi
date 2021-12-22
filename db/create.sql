@@ -7,7 +7,7 @@ CREATE TABLE Products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR(255),
   description TEXT,
-  Price NUMERIC(10, 2),
+  price NUMERIC(10, 2),
   Kleur_id INTEGER,
   Sluiting_id INTEGER,
   Categorie_id INTEGER
@@ -54,42 +54,42 @@ CREATE TABLE Sluiting (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
+insert into Products (id, name, description, price, Kleur_id, Sluiting_id, Categorie_id) values 
 (1, 'Necklace Gold', 
 'Een goude ketting met twee lagen, aan beide lagen hebben een rond bedeltje. Bij deze ketting zit ook een algemene Sluiting. Staat leuk op alles!', 
 15.95, 1, 1, 1);
 
-insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
+insert into Products (id, name, description, price, Kleur_id, Sluiting_id, Categorie_id) values 
 (2, 'Necklace Silver', 
 'Een zilveren ketting met 1 laag en rondom de hele ketting zitten suer leuke ronde bedeletjes. Ook zit er bij deze ketting zit een eenvoudige algemene Sluiting. Leuk voor de feestdagen en gewoon door de weeks!', 
 9.95, 2, 1, 1);
 
-insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
+insert into Products (id, name, description, price, Kleur_id, Sluiting_id, Categorie_id) values 
 (3, 'Earrings Gold',
 'Super leuke gouden oorbellen met drie lagen. De achterkantjes zijn hierbij inbegrepen, het zijn vlinder achterkantjes.', 
 13.5, 1, 2, 2);
 
-insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
+insert into Products (id, name, description, price, Kleur_id, Sluiting_id, Categorie_id) values 
 (4, 'Earrings Silver', 
 'Fantastische zilveren oorbellen met super leuke runde hangertjes in de vorm van een smile. Deze oorbellen zijn super simpel te sluiten, gewoon de achterkant om je prikker heen klikken en klaar!', 
 13.5, 2, 2, 2);
 
-insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
+insert into Products (id, name, description, price, Kleur_id, Sluiting_id, Categorie_id) values 
 (5, 'Ring Gold', 
 'Erg leuke gouden ring in de vorm van een lauwerkrans.', 
 14, 1, 2, 3);
 
-insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
+insert into Products (id, name, description, price, Kleur_id, Sluiting_id, Categorie_id) values 
 (6, 'Ring Silver',
 'Een simpele maar toch leuke zilveren ring met een suptiel detail, die overal leuk bij staat!', 
 14, 2, 2, 3);
 
-insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
+insert into Products (id, name, description, price, Kleur_id, Sluiting_id, Categorie_id) values 
 (7, 'Bracelet Gold', 
 'Een chique gouden armband met een plaatje, op deze armband zit een standaard simpele Sluiting. Bij deze armband kan je ervoor kiezen om een personalised tekst erop te laten zetten. (stuur dan een mail met het bestelnummer en wat u erop wil)', 
 14, 1, 1, 4);
 
-insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
+insert into Products (id, name, description, price, Kleur_id, Sluiting_id, Categorie_id) values 
 (8, 'Bracelet Silver', 
 'Een  simpele mooie zilveren armband met een standaard Sluiting, deze armband staat leuk bij alles.', 
 14, 2, 1, 4);

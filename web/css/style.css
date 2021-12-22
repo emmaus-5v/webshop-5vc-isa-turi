@@ -1,6 +1,10 @@
 /* all pages */
 
-body {background-color: rgb(255, 214, 228)
+html {
+  background-image: url("../images/Background2.jpg") ;
+}
+
+body {background-color: rgba(255,255,255,10%)
 }
 
 footer {
@@ -68,6 +72,10 @@ footer {
 }
 .product_amount {
   width: 80px
+}
+
+.introductie{
+  background-color: rgba(140, 177, 163, 0.774);
 }
 
 /* basket page */
