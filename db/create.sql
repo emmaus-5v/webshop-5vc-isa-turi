@@ -62,7 +62,7 @@ insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categ
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (2, 'Necklace Silver', 
 'Een zilveren ketting met 1 laag, en rondom de hele ketting zitten leuke rondjes. Ook zit er bij deze ketting een erg simpele Sluiting. Leuk voor de feestdagen!', 
-9.95, 1, 1, 1);
+9.95, 2, 1, 1);
 
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (3, 'Earrings Gold',
@@ -72,7 +72,7 @@ insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categ
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (4, 'Earrings Silver', 
 'Leuke zilveren oorbellen met erg leuke hangertjes in de vorm van smileys. Je kan deze oorbellen erg simpel sluiten, gewoon de achterkant om je prikker heen klikken en klaar!', 
-13.5, 1, 2, 2);
+13.5, 2, 2, 2);
 
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (5, 'Ring Gold', 
@@ -82,7 +82,7 @@ insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categ
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (6, 'Ring Silver',
 'Een simpele zilveren ring die overal leuk bij staat!', 
-14, 1, 2, 3);
+14, 2, 2, 3);
 
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (7, 'Bracelet Gold', 
@@ -92,11 +92,11 @@ insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categ
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (8, 'Bracelet Silver', 
 'Een zilveren armband met een gewone simpele Sluiting.', 
-14, 1, 1, 4);
+14, 2, 1, 4);
 
 
 INSERT INTO Kleur (k_id, color) values (1, 'Goud');
-INSERT INTO Kleur (k_id, color) values (2, 'zilver');
+INSERT INTO Kleur (k_id, color) values (2, 'Zilver');
 
 INSERT INTO Categorie (c_id, category) values (1, 'Necklace');
 INSERT INTO Categorie (c_id, category) values (2, 'Earring');
