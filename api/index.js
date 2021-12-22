@@ -27,6 +27,7 @@ app.use(express.static('../web'))
 // definieer startpunten voor de API-server
 app.get('/api/echo', echoRequest)
 app.get('/api/categories', getCategories)
+app.get('/api/ProductMaterial', getProductMaterial)
 app.get('/api/products', getProducts)
 app.get('/api/products/:id', getProductById)
 //app.get('/api/products/:id/related', db.getRelatedProductsById)
@@ -63,6 +64,21 @@ function getCategories(request, response) {
   response.status(200).send(data)
   console.log('API verstuurt /api/categories/')
 }
+
+
+
+function getProductMaterial(request, response) {
+  console.log('API ontvangt /api/ProductMaterial/:id/?', request.query)
+
+  let data = []
+  const ProductMaterial_id = parseInt(request.params.id)
+  const sqlOpdracht = db.prepare('SELECT pm_id, products_id, id, Material_id, m_id, color FROM ProductMaterial Join Material ON Material.m_id = ProductMaterial.Material_id JOIN products ON products.id = ProductMaterial.products_id WHERE id = ? ORDER BY name ASC')
+  data = sqlOpdracht.all(ProductMaterial_id)
+  response.status(200).send(data)
+  console.log(data)
+  console.log('API verstuurt /api/Product/material/:id/?')
+}
+
 
 function getProducts(request, response) {
   console.log('API ontvangt /api/products/?', request.query)
