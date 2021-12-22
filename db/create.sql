@@ -81,17 +81,17 @@ insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categ
 
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (6, 'Ring Silver',
-'Een simpele zilveren ring die overal leuk bij staat!', 
+'Een simpele maar toch leuke zilveren ring met een suptiel detail, die overal leuk bij staat!', 
 14, 2, 2, 3);
 
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (7, 'Bracelet Gold', 
-'Een gouden armband met een plaatje, op deze armband zit een gewone simpele Sluiting. Je kan hierbij nog de keuze maken om er iets op te laten zetten voor een iets hogere prijs.', 
+'Een chique gouden armband met een plaatje, op deze armband zit een standaard simpele Sluiting. Bij deze armband kan je ervoor kiezen om een personalised tekst erop te laten zetten. (stuur dan een mail met het bestelnummer en wat u erop wil)', 
 14, 1, 1, 4);
 
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (8, 'Bracelet Silver', 
-'Een zilveren armband met een gewone simpele Sluiting.', 
+'Een  simpele mooie zilveren armband met een standaard Sluiting, deze armband staat leuk bij alles.', 
 14, 2, 1, 4);
 
 
