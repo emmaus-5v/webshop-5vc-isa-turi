@@ -109,8 +109,8 @@ INSERT INTO Materiaal (m_id, material) values (3, 'Nep goud');
 INSERT INTO Materiaal (m_id, material) values (4, 'Nep zilver');
 INSERT INTO Materiaal (m_id, material) values (5, 'verguld goud');
 
-INSERT INTO Sluiting (s_id, clasp) values (1, 'Wel een Sluiting');
-INSERT INTO Sluiting (s_id, clasp) values (2, 'Niet een Sluiting');
+INSERT INTO Sluiting (s_id, clasp) values (1, 'Aanwezig');
+INSERT INTO Sluiting (s_id, clasp) values (2, 'Afwezig');
 
 INSERT INTO ProductsMateriaal (pm_id, Products_id, Materiaal_id) values (1, 1, 2);
 INSERT INTO ProductsMateriaal (pm_id, Products_id, Materiaal_id) values (2, 1, 5);

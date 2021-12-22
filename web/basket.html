@@ -191,7 +191,7 @@
           const product = JSON.parse(localStorage.getItem(`item_${id}`))
           const clone = template.content.cloneNode(true)
           clone.querySelector(".product_name").textContent = product.name
-          clone.querySelector(".product_price").textContent = `€ ${product.price.toFixed(2)}`
+          clone.querySelector(".product_price").textContent = `€ ${product.Price.toFixed(2)}`
           clone.querySelector(".product_image").src =`images/${product.id}.jpg`
           clone.querySelector(".product_amount_show").textContent = amount             
           clone.querySelector(".product_id_show").textContent = product.id             
