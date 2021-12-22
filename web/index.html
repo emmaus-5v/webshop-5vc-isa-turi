@@ -65,6 +65,7 @@
 						<li><span class="propert-name">Kleur: </span><span class="product_Kleur"></span></li>
 						<li><span class="propert-name">Categorie: </span><span class="product_Categorie"></span></li>
 						<li><span class="propert-name">Sluiting: </span><span class="product_Sluiting"></span></li>
+						<li><span class="propert-name">Materiaal: </span><span class="ProductsMateriaal_Material"></span></li>
 					</ul>
 					<input class="product_amount" type="number" value="1" min="1">
 					<input class="product_id" type="hidden" name="id" data-json="">
@@ -101,7 +102,27 @@
         request.onload = showProducts 
         request.send() 
 
+		var request2 = new XMLHttpRequest()
+        request2.open('GET', '/api/ProductsMateriaal/:id', true)
+        request2.onload = showProductsMaterialen
+        request2.send() 
+		console.log("get ProductsMateriaal send")
+
       })();
+
+	  function showProductsMateriaalById(product_id) {
+		console.log("showProductsMateriaalById called")
+		// laad producten
+        // de functie showProducts wordt aangeroepen als er antwoord van de API is
+        var request3 = new XMLHttpRequest()
+        request3.open('GET', `/api/ProductsMateriaal/${product_id}`, true) 
+		console.log("data aangekomen")
+        request3.onload = showProducts 
+        request3.send()
+	  }
+
+
+
 
     // deze functie zet de producten op het scherm
     // nadat de API is aangeroepen
@@ -137,6 +158,38 @@
               container.appendChild(clone)
             }
           }
+
+		
+	 function showProductsMateriaal() {
+      console.log("showProductsMateriaal called")
+      const template = document.querySelector('#Productscard'); // template (it must be a template, not any tag) that holds html for one option, this html is cloned for each option
+      const app = document.getElementById('index') // parent in the DOM to which children are added for each genre
+	  	
+      const container = document.createElement('div')
+      container.setAttribute('class', 'container row article-container')
+	  
+      app.appendChild(container)
+
+	  const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('ProductsId');
+
+      var request = new XMLHttpRequest()
+      request.open('GET', `/api/Products/${productId}`, true)
+	  request.onload = function (){
+		console.log("showProductkleuren1 called")
+			var data = JSON.parse(this.response) // vertaalt de response van API naar array met kleuren
+			for (let row in data) { // herhaal voor elk product
+				const ProductMateriaal = data[row]
+				// voeg product toe aan DOM, 
+				// zodat deze zichtbaar wordt op de webpagina	
+				const clone = template.content.cloneNode(true);
+				clone.querySelector(".ProductsMateriaal_Materiaal").textContent = ProductsMateriaal.material
+				// hier moet je de property "onSubmit" de juiste waarde geven
+				container.appendChild(clone)
+			}
+	   }	
+	 }	  
+
 	</script>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
