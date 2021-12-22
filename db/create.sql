@@ -56,27 +56,27 @@ CREATE TABLE Sluiting (
 
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (1, 'Necklace Gold', 
-'Een goude ketting met twee lagen, aan beide lagen zit een rondje. Bij deze ketting zit ook een gewone algemene Sluiting. Staat leuk op alles!', 
+'Een goude ketting met twee lagen, aan beide lagen hebben een rond bedeltje. Bij deze ketting zit ook een algemene Sluiting. Staat leuk op alles!', 
 15.95, 1, 1, 1);
 
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (2, 'Necklace Silver', 
-'Een zilveren ketting met 1 laag, en rondom de hele ketting zitten leuke rondjes. Ook zit er bij deze ketting een erg simpele Sluiting. Leuk voor de feestdagen!', 
+'Een zilveren ketting met 1 laag en rondom de hele ketting zitten suer leuke ronde bedeletjes. Ook zit er bij deze ketting zit een eenvoudige algemene Sluiting. Leuk voor de feestdagen en gewoon door de weeks!', 
 9.95, 2, 1, 1);
 
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (3, 'Earrings Gold',
-'Super leuke gouden oorbellen die helemaal in zijn. De achterkantjes zijn hierbij inbegrepen.', 
+'Super leuke gouden oorbellen met drie lagen. De achterkantjes zijn hierbij inbegrepen, het zijn vlinder achterkantjes.', 
 13.5, 1, 2, 2);
 
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (4, 'Earrings Silver', 
-'Leuke zilveren oorbellen met erg leuke hangertjes in de vorm van smileys. Je kan deze oorbellen erg simpel sluiten, gewoon de achterkant om je prikker heen klikken en klaar!', 
+'Fantastische zilveren oorbellen met super leuke runde hangertjes in de vorm van een smile. Deze oorbellen zijn super simpel te sluiten, gewoon de achterkant om je prikker heen klikken en klaar!', 
 13.5, 2, 2, 2);
 
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
 (5, 'Ring Gold', 
-'Gouden ring met de vorm van een krans.', 
+'Erg leuke gouden ring in de vorm van een lauwerkrans.', 
 14, 1, 2, 3);
 
 insert into Products (id, name, description, Price, Kleur_id, Sluiting_id, Categorie_id) values 
