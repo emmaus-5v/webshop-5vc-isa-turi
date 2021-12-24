@@ -68,6 +68,7 @@
 					</ul>
 					<input class="product_amount" type="number" value="1" min="1">
 					<input class="product_id" type="hidden" name="id" data-json="">
+					<input class="product_id" type="hidden" name="id" data-json="">
 					<button class="btn btn-outline-dark shop-button" onclick="event.stopPropagation();addAmountClosestToBasket(this);$('.toast').toast('show')">🛒</button>
 				</div>
 			</div>
@@ -116,7 +117,7 @@
         var request3 = new XMLHttpRequest()
         request3.open('GET', `/api/ProductsMateriaal/${product_id}`, true) 
 		console.log("data aangekomen")
-        request3.onload = showProducts 
+        request3.onload = showProductsMateriaal 
         request3.send()
 	  }
 
@@ -174,17 +175,24 @@
 
       var request = new XMLHttpRequest()
       request.open('GET', `/api/Products/${productId}`, true)
-	  request.onload = function (){
-		console.log("showProductsMateriaal1 called")
+
+	  request.onload = function showProductsMateriaalById(){
+
 			var data = JSON.parse(this.response) // vertaalt de response van API naar array met kleuren
 			for (let row in data) { // herhaal voor elk product
+
 				const ProductMateriaal = data[row]
+
+
 				// voeg product toe aan DOM, 
 				// zodat deze zichtbaar wordt op de webpagina	
 				const clone = template.content.cloneNode(true);
 				clone.querySelector(".ProductsMateriaal_material").textContent = ProductsMateriaal.material
+				clone.querySelector(".product_id").value = Products.id
+                clone.querySelector(".product_id").dataset.json = JSON.stringify(product)
 				// hier moet je de property "onSubmit" de juiste waarde geven
 				container.appendChild(clone)
+				
 			}
 	   }	
 	 }	  
