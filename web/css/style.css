@@ -4,7 +4,7 @@ html {
   background-image: url("../images/Background2.jpg") ;
 }
 
-body {background-color: rgba(255,255,255,10%)
+body {background-color: rgba(255,255,255,13%)
 }
 
 footer {
@@ -34,11 +34,13 @@ footer {
   width:200px; 
   height: 700px; 
   margin-bottom: 20px;  
+  background-color:rgba(225, 249, 255, 0.788);
 
 }
 
 .card-header {
   height: 5em;
+  background-color: rgba(179, 199, 204, 0.788);
 }
 
 .card-text {
@@ -53,11 +55,6 @@ footer {
   margin-top: 20px;
 }
 
-.product img {
-  margin: auto;
-  margin-top: 20px;
-  object-fit: cover;
-}
 
 .cropped {
   object-fit: cover;
@@ -76,7 +73,7 @@ footer {
 }
 
 .introductie{
-  background-color: rgba(140, 177, 163, 0.774);
+  background-color: rgba(225, 249, 255, 0.418);
 }
 
 .Koptekst{
@@ -87,6 +84,56 @@ footer {
 .product_title{
   color:rgb(0, 0, 0)
 }
+
+
+
+/*Image frontpage effect*/
+
+.product img {
+  margin: auto;
+  margin-top: 20px;
+  object-fit: cover;
+  display: block;
+  
+}
+
+
+.Yes {
+  position: relative;
+  width: 100%;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color:rgb(168, 187, 192);
+}
+
+.Yes:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
 
 /* basket page */
 .product-properties {

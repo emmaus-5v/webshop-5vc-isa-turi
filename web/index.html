@@ -55,7 +55,13 @@
 		<div class="col-sm">
 			<div class="card" onclick="openArticlePage(this)">
 				<h5 class="card-header product_title"></h5>
-				<img width="200" height="200" class="product_image card-img-top">
+
+				<div class="Yes">
+					<img width="200" height="200" class="product_image card-img-top">
+					<div class="overlay">
+						<div class="text"> <span class="propert-name"></span><span class="product_Categorie"></span></div>
+					</div>
+				</div>
 
 				<div class="card-body">
 					<p class="product_description card-text"></p>
@@ -192,7 +198,7 @@
                 clone.querySelector(".product_id").dataset.json = JSON.stringify(product)
 				// hier moet je de property "onSubmit" de juiste waarde geven
 				container.appendChild(clone)
-				
+
 			}
 	   }	
 	 }	  
