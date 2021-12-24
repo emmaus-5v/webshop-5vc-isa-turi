@@ -46,9 +46,9 @@
 
 	<main id="index">
 		<div class="container">
-			<h2>MusicShop</h2>
-			<p class= "introductie">Hieronder zie je een lijst met sieraden die je allemaal bij ons kunt bestellen.<br> klik op een artikel voor meer informatie<br>klik op de "winkelwagentje" om het artikel in je winkelwagen te stoppen</p> </p>
-			<h5>Artikelen</h5>
+			<h2>JewelleryBoutique</h2>
+			<p class= "introductie">Welkome bij JewelleryBoutique<br> Hieronder zie je een lijst met sieraden die je allemaal bij ons kunt bestellen.<br> klik op een artikel voor meer informatie<br>klik op de "winkelwagentje" om het artikel in je winkelwagen te stoppen</p> </p>
+			<h3 class="Koptekst">Artikelen</h3>
 		</div>	
     <!-- template for product info-->
   	<template id="productcard">
@@ -64,7 +64,7 @@
 						<li><span class="propert-name">Kleur: </span><span class="product_Kleur"></span></li>
 						<li><span class="propert-name">Categorie: </span><span class="product_Categorie"></span></li>
 						<li><span class="propert-name">Sluiting: </span><span class="product_Sluiting"></span></li>
-						<li><span class="propert-name">Materiaal: </span><span class="ProductsMateriaal_Material"></span></li>
+						<li><span class="propert-name">Materiaal: </span><span class="ProductsMateriaal_material"></span></li>
 					</ul>
 					<input class="product_amount" type="number" value="1" min="1">
 					<input class="product_id" type="hidden" name="id" data-json="">
@@ -175,19 +175,22 @@
       var request = new XMLHttpRequest()
       request.open('GET', `/api/Products/${productId}`, true)
 	  request.onload = function (){
-		console.log("showProductkleuren1 called")
+		console.log("showProductsMateriaal1 called")
 			var data = JSON.parse(this.response) // vertaalt de response van API naar array met kleuren
 			for (let row in data) { // herhaal voor elk product
 				const ProductMateriaal = data[row]
 				// voeg product toe aan DOM, 
 				// zodat deze zichtbaar wordt op de webpagina	
 				const clone = template.content.cloneNode(true);
-				clone.querySelector(".ProductsMateriaal_Materiaal").textContent = ProductsMateriaal.material
+				clone.querySelector(".ProductsMateriaal_material").textContent = ProductsMateriaal.material
 				// hier moet je de property "onSubmit" de juiste waarde geven
 				container.appendChild(clone)
 			}
 	   }	
 	 }	  
+
+
+
 
 	</script>
 
