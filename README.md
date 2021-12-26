@@ -26,17 +26,19 @@ Stap 2: Database opzetten
 Tip: je kunt een multipliciteitendiagram gebruiken als tussenstap voor je database-ontwerp
 - [x] Vul de tabellen met informatie (INSERT commando)
 - [x] Voeg eventueel plaatjes toe (web/images map)
-
+- [x] Voeg leuke kleuren toe
 Stap 3: API aanpassen 
 - [x] Pas de API aan, zodat je alle informatie uit je database kunt opvragen via de API
 
 Stap 4: Website aanpassen 
-- [ ] Pas de website aan, zodat alle informatie getoond wordt.
+- [x] Pas de website aan, zodat alle informatie getoond wordt.
+- [x] Voeg extras toe aan je website
 
 Stap x: Webshop verder verbeteren
-- [ ] Herhaal stap 2 t/m 4 om je webshop verder te verbeteren. 
+- [x] Herhaal stap 2 t/m 4 om je webshop verder te verbeteren. 
 Voor en goed cijfer is het belangrijk dat je laat zien dat je uitstekend begrepen hebt hoe je een webshop moet opzetten.
-
+- [x] Verbeter alles nog meer en maak de website mooier
+- [x] Voeg annimaties toe 
 
 # Basis uitleg hoe de webshop werkt
 The basic idea is that a webpage of the shop is loaded by the browser and information on the articles in the shop are added to that depending on what the user selects.
